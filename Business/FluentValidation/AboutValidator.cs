@@ -13,6 +13,8 @@ namespace Business.FluentValidation
         public AboutValidator()
         {
             RuleFor(x => x.Description).NotEmpty().WithMessage("Açıklama alanı boş bırakılamaz.");
+            RuleFor(x => x.Description).MinimumLength(50).WithMessage("Lütfen en az 50 karakterlik açıklama bilgisi giriniz.");
+            RuleFor(x => x.Description).MaximumLength(1500).WithMessage("Yapabileceğiniz maksimum açıklama karakteri 1500'tür.");
         }
     }
 }
