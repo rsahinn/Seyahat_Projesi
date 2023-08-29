@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-	internal interface ISubAboutDal: IGenericDal<SubAbout>
+	public interface ISubAboutDal: IGenericDal<SubAbout>
 	{
 	}
 }
